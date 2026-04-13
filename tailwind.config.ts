@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+		"./1776083122216821277.html"
 	],
 	prefix: "",
 	theme: {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				sans: ['IBM Plex Sans', 'sans-serif'],
+				display: ['Cormorant Garamond', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,6 +57,26 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				navy: {
+					50: '#f0f4fa',
+					100: '#d9e3f3',
+					200: '#b3c7e7',
+					300: '#7da3d3',
+					400: '#4d7fbe',
+					500: '#2a5fa3',
+					600: '#1a4a8a',
+					700: '#133571',
+					800: '#0e2458',
+					900: '#0a1940',
+					950: '#060f28',
+				},
+				gold: {
+					300: '#f0d080',
+					400: '#e8c04a',
+					500: '#d4a820',
+					600: '#b8900a',
+					700: '#9a7800',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -70,25 +95,32 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
-				}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					from: { opacity: '0', transform: 'translateY(20px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
+				},
+				'slide-in-right': {
+					from: { opacity: '0', transform: 'translateX(30px)' },
+					to: { opacity: '1', transform: 'translateX(0)' }
+				},
+				'scale-in': {
+					from: { opacity: '0', transform: 'scale(0.95)' },
+					to: { opacity: '1', transform: 'scale(1)' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out forwards',
+				'slide-in-right': 'slide-in-right 0.5s ease-out forwards',
+				'scale-in': 'scale-in 0.4s ease-out forwards',
 			}
 		}
 	},
