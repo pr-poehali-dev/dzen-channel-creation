@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['PT Sans', 'sans-serif'],
-				display: ['PT Serif', 'serif'],
+				sans: ['Rubik', 'sans-serif'],
+				display: ['Unbounded', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

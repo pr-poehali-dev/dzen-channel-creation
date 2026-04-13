@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import Icon from "@/components/ui/icon";
 
-const HERO_IMAGE = "https://cdn.poehali.dev/projects/7bd7cf71-9877-4ed8-9d70-3cd182f94736/files/1472e120-e9c5-4de8-b826-96a32335a385.jpg";
+const HERO_IMAGE = "https://cdn.poehali.dev/projects/7bd7cf71-9877-4ed8-9d70-3cd182f94736/files/94bbae78-8b50-428d-9145-da4309f2561b.jpg";
 
-function useInView(threshold = 0.15) {
+function useInView(threshold = 0.12) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
   useEffect(() => {
@@ -19,34 +19,34 @@ function useInView(threshold = 0.15) {
 
 const services = [
   {
-    icon: "BarChart3",
-    title: "Аналитика и консалтинг",
-    desc: "Глубокий анализ бизнес-процессов, выявление точек роста и разработка стратегии масштабирования.",
+    icon: "PenLine",
+    title: "Обучающие материалы",
+    desc: "Всё что нужно для самостоятельного старта — курс, шаблоны, примеры и разборы реальных каналов.",
   },
   {
-    icon: "Shield",
-    title: "Управление рисками",
-    desc: "Комплексная оценка рисков, разработка превентивных мер и антикризисное сопровождение.",
+    icon: "TrendingUp",
+    title: "Рост аудитории",
+    desc: "Стратегия продвижения в Дзене, которая привлекает живых читателей, а не ботов.",
   },
   {
-    icon: "Users",
-    title: "Операционная поддержка",
-    desc: "Оптимизация внутренних процессов, автоматизация рутинных задач и повышение эффективности команды.",
+    icon: "Sparkles",
+    title: "Контент-стратегия",
+    desc: "Находим твою нишу, голос и темы — чтобы писать с кайфом и читатели возвращались.",
   },
   {
-    icon: "Globe",
-    title: "Выход на новые рынки",
-    desc: "Исследование рынков, адаптация продукта и сопровождение экспансии на новые территории.",
+    icon: "DollarSign",
+    title: "Монетизация",
+    desc: "Как зарабатывать на Дзен-канале: реклама, партнёрки, продажи. Конкретные схемы.",
   },
   {
-    icon: "Zap",
-    title: "Цифровая трансформация",
-    desc: "Внедрение современных технологий, цифровизация процессов и обучение команды.",
+    icon: "MessageCircle",
+    title: "Личное ведение",
+    desc: "Никита лично разбирает твой канал, даёт обратную связь и помогает расти каждую неделю.",
   },
   {
-    icon: "FileText",
-    title: "Юридическое сопровождение",
-    desc: "Договорная работа, защита интересов компании и сопровождение сложных сделок.",
+    icon: "Rocket",
+    title: "Канал под ключ",
+    desc: "Создаём канал с нуля — от идеи и оформления до первых публикаций и аудитории.",
   },
 ];
 
@@ -55,7 +55,7 @@ const plans = [
     name: "Самостоятельный материал",
     price: "7 600",
     period: "руб",
-    desc: "Готовые материалы для самостоятельного запуска канала",
+    desc: "Всё для старта — сам, в своём темпе",
     features: [
       "Полный обучающий курс",
       "Шаблоны контент-плана",
@@ -64,27 +64,29 @@ const plans = [
       "Поддержка в чате",
     ],
     highlighted: false,
+    emoji: "📚",
   },
   {
     name: "Личное ведение",
     price: "12 500",
     period: "руб",
-    desc: "Никита лично помогает развивать ваш канал",
+    desc: "Никита лично помогает расти",
     features: [
       "Персональные созвоны",
-      "Разбор вашего канала",
-      "Стратегия роста под вас",
+      "Разбор твоего канала",
+      "Стратегия роста под тебя",
       "Проверка контента",
-      "Обратная связь 24/7",
+      "Обратная связь всегда",
       "Месяц сопровождения",
     ],
     highlighted: true,
+    emoji: "🤝",
   },
   {
     name: "Канал под ключ",
     price: "33 900",
     period: "руб",
-    desc: "Никита создаёт и запускает канал полностью за вас",
+    desc: "Никита делает всё сам — ты получаешь канал",
     features: [
       "Создание канала с нуля",
       "Разработка стратегии",
@@ -94,32 +96,21 @@ const plans = [
       "Сопровождение 3 месяца",
     ],
     highlighted: false,
+    emoji: "🚀",
   },
 ];
 
 const stats = [
-  { value: "12+", label: "лет на рынке" },
-  { value: "380", label: "клиентов B2B" },
-  { value: "98%", label: "удержание клиентов" },
-  { value: "47", label: "эксперта в команде" },
+  { value: "4+", label: "года в Дзене" },
+  { value: "50к+", label: "подписчиков суммарно" },
+  { value: "30+", label: "каналов запущено" },
+  { value: "×8", label: "средний рост за 3 мес" },
 ];
 
-const team = [
-  {
-    name: "Александр Ветров",
-    role: "Генеральный директор",
-    exp: "22 года в консалтинге",
-  },
-  {
-    name: "Марина Соколова",
-    role: "Директор по развитию",
-    exp: "Экс-McKinsey, 15 лет",
-  },
-  {
-    name: "Дмитрий Орлов",
-    role: "Технический директор",
-    exp: "Архитектор корпоративных систем",
-  },
+const results = [
+  { name: "Канал о путешествиях", result: "0 → 12 000 подписчиков за 4 месяца" },
+  { name: "Финансовый блог", result: "Монетизация с первого месяца" },
+  { name: "Авто-канал", result: "8 000 читателей, рекламный доход от 80к/мес" },
 ];
 
 export default function Index() {
@@ -149,72 +140,71 @@ export default function Index() {
     <div className="min-h-screen bg-background font-sans">
 
       {/* NAVBAR */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-navy-950/98 backdrop-blur-md shadow-2xl" : "bg-transparent"
-      }`} style={{ background: scrolled ? "rgba(20, 23, 32, 0.98)" : "transparent" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-400"
+        style={{ background: scrolled ? "rgba(28, 22, 18, 0.96)" : "transparent", backdropFilter: scrolled ? "blur(12px)" : "none" }}
+      >
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-18" style={{ height: "72px" }}>
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 flex items-center justify-center" style={{ background: "#2563b0" }}>
-                <span className="font-display font-bold text-lg leading-none text-white">Н</span>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center text-white font-display font-semibold text-sm"
+                style={{ background: "linear-gradient(135deg, #e8630a, #f5c842)" }}>
+                Н
               </div>
               <div>
-                <span className="font-display font-bold text-white text-xl tracking-wide">Никита Варакин</span>
-                <span className="block text-[10px] tracking-[0.2em] uppercase leading-none mt-0.5" style={{ color: "#4e9cf0" }}>Telegram-каналы</span>
+                <span className="font-display font-medium text-white text-base tracking-tight">Никита Варакин</span>
+                <span className="block text-[10px] leading-none mt-0.5" style={{ color: "#f5c842", opacity: 0.9 }}>Дзен-каналы</span>
               </div>
             </div>
 
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-7">
               {[
                 { id: "home", label: "Главная" },
                 { id: "services", label: "Услуги" },
-                { id: "about", label: "О нас" },
+                { id: "about", label: "Обо мне" },
                 { id: "pricing", label: "Тарифы" },
               ].map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className="text-sm tracking-wide transition-colors duration-200 relative group"
-                  style={{ color: activeNav === item.id ? "#4e9cf0" : "#cbd5e1" }}
+                  className="text-sm font-light transition-all duration-200"
+                  style={{ color: activeNav === item.id ? "#f5c842" : "rgba(255,255,255,0.75)" }}
                 >
                   {item.label}
-                  <span className="absolute -bottom-1 left-0 h-px transition-all duration-300 group-hover:w-full"
-                    style={{ background: "#2563b0", width: activeNav === item.id ? "100%" : "0" }} />
                 </button>
               ))}
             </div>
 
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden md:block">
               <button
                 onClick={() => scrollTo("pricing")}
-                className="px-6 py-2.5 text-sm font-semibold tracking-wide transition-colors duration-200"
-                style={{ background: "#2563b0", color: "#ffffff" }}
-                onMouseEnter={e => (e.currentTarget.style.background = "#3b82d4")}
-                onMouseLeave={e => (e.currentTarget.style.background = "#2563b0")}
+                className="px-5 py-2 rounded-full text-sm font-medium transition-all duration-200"
+                style={{ background: "#e8630a", color: "#fff" }}
+                onMouseEnter={e => (e.currentTarget.style.background = "#f07c2a")}
+                onMouseLeave={e => (e.currentTarget.style.background = "#e8630a")}
               >
-                Начать работу
+                Выбрать тариф
               </button>
             </div>
 
             <button className="md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
-              <Icon name={menuOpen ? "X" : "Menu"} size={24} />
+              <Icon name={menuOpen ? "X" : "Menu"} size={22} />
             </button>
           </div>
         </div>
 
         {menuOpen && (
-          <div className="md:hidden border-t px-6 py-4" style={{ background: "#141720", borderColor: "#2563b0" }}>
+          <div className="md:hidden px-6 py-5 space-y-3" style={{ background: "rgba(28,22,18,0.98)" }}>
             {[
               { id: "home", label: "Главная" },
               { id: "services", label: "Услуги" },
-              { id: "about", label: "О нас" },
+              { id: "about", label: "Обо мне" },
               { id: "pricing", label: "Тарифы" },
             ].map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
-                className="block w-full text-left py-3 border-b last:border-0 text-slate-300 hover:text-white"
-                style={{ borderColor: "#253050" }}
+                className="block w-full text-left py-2 text-white/75 hover:text-white transition-colors text-sm"
               >
                 {item.label}
               </button>
@@ -226,56 +216,60 @@ export default function Index() {
       {/* HERO */}
       <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={HERO_IMAGE} alt="Команда" className="w-full h-full object-cover" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #141720 0%, #1e2330 55%, #253050 100%)", opacity: 0.92 }} />
-          <div className="absolute inset-0 bg-subtle-pattern opacity-40" />
+          <img src={HERO_IMAGE} alt="Audi A6 C8" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(28,22,18,0.88) 45%, rgba(28,22,18,0.3) 100%)" }} />
+          <div className="absolute inset-0 bg-subtle-pattern" />
         </div>
 
-        <div ref={heroSection.ref} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
-          <div className="max-w-3xl">
-            <div className={`${heroSection.inView ? "animate-fade-in" : "opacity-0"}`}>
-              <span className="inline-flex items-center gap-2 text-xs tracking-[0.3em] uppercase font-medium mb-6" style={{ color: "#4e9cf0" }}>
-                <span className="w-8 h-px" style={{ background: "#2563b0" }} />
-                Создание Telegram-каналов
+        <div ref={heroSection.ref} className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 pt-28 pb-20 w-full">
+          <div className="max-w-2xl">
+            <div className={heroSection.inView ? "animate-fade-in" : "opacity-0"}>
+              <span className="inline-flex items-center gap-2 text-[11px] tracking-[0.25em] uppercase font-medium mb-8"
+                style={{ color: "#f5c842" }}>
+                <span className="w-6 h-px" style={{ background: "#f5c842" }} />
+                Дзен-каналы с душой
               </span>
             </div>
 
-            <h1 className={`font-display text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6 ${heroSection.inView ? "animate-fade-in animate-delay-100" : "opacity-0"}`}>
-              Никита Варакин<br />
-              <span className="text-gradient-gold">создаёт каналы</span>
+            <h1 className={`font-display text-4xl md:text-6xl font-medium text-white leading-[1.15] mb-6 ${heroSection.inView ? "animate-fade-in animate-delay-100" : "opacity-0"}`}>
+              Пишешь —<br />
+              <span className="text-gradient-gold">тебя читают</span>
             </h1>
 
-            <p className={`text-lg md:text-xl leading-relaxed mb-10 max-w-xl text-slate-300 ${heroSection.inView ? "animate-fade-in animate-delay-200" : "opacity-0"}`}>
-              Запускаю Telegram-каналы с нуля — от стратегии до контента. Самостоятельное обучение, личное ведение или канал полностью под ключ.
+            <p className={`text-lg leading-relaxed mb-10 font-light ${heroSection.inView ? "animate-fade-in animate-delay-200" : "opacity-0"}`}
+              style={{ color: "rgba(255,255,255,0.7)", maxWidth: "440px" }}>
+              Помогаю запустить Дзен-канал, который живёт и растёт. Самостоятельно, вместе или под ключ — выбери как тебе удобно.
             </p>
 
-            <div className={`flex flex-wrap gap-4 ${heroSection.inView ? "animate-fade-in animate-delay-300" : "opacity-0"}`}>
+            <div className={`flex flex-wrap gap-3 ${heroSection.inView ? "animate-fade-in animate-delay-300" : "opacity-0"}`}>
               <button
                 onClick={() => scrollTo("pricing")}
-                className="px-8 py-4 font-semibold text-sm tracking-wide flex items-center gap-2 transition-all duration-200"
-                style={{ background: "#2563b0", color: "#ffffff" }}
-                onMouseEnter={e => (e.currentTarget.style.background = "#3b82d4")}
-                onMouseLeave={e => (e.currentTarget.style.background = "#2563b0")}
+                className="px-7 py-3.5 rounded-full font-medium text-sm flex items-center gap-2 transition-all duration-200"
+                style={{ background: "#e8630a", color: "#fff" }}
+                onMouseEnter={e => (e.currentTarget.style.background = "#f07c2a")}
+                onMouseLeave={e => (e.currentTarget.style.background = "#e8630a")}
               >
-                Выбрать тариф
-                <Icon name="ArrowRight" size={16} />
+                Смотреть тарифы
+                <Icon name="ArrowRight" size={15} />
               </button>
               <button
-                onClick={() => scrollTo("services")}
-                className="px-8 py-4 border text-white font-medium text-sm tracking-wide transition-all duration-200 hover:bg-white/10"
-                style={{ borderColor: "rgba(255,255,255,0.3)" }}
+                onClick={() => scrollTo("about")}
+                className="px-7 py-3.5 rounded-full text-sm font-light transition-all duration-200"
+                style={{ border: "1px solid rgba(255,255,255,0.3)", color: "rgba(255,255,255,0.85)" }}
+                onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,255,255,0.08)")}
+                onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
               >
-                Узнать об услугах
+                Обо мне
               </button>
             </div>
           </div>
 
-          <div className={`grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t ${heroSection.inView ? "animate-fade-in animate-delay-500" : "opacity-0"}`}
+          <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 mt-24 pt-10 border-t ${heroSection.inView ? "animate-fade-in animate-delay-500" : "opacity-0"}`}
             style={{ borderColor: "rgba(255,255,255,0.1)" }}>
             {stats.map((s) => (
-              <div key={s.value} className="text-center md:text-left">
-                <div className="font-display text-4xl md:text-5xl font-bold text-gradient-gold">{s.value}</div>
-                <div className="text-sm mt-1 tracking-wide text-slate-400">{s.label}</div>
+              <div key={s.value}>
+                <div className="font-display text-3xl md:text-4xl font-medium text-gradient-gold">{s.value}</div>
+                <div className="text-sm font-light mt-1" style={{ color: "rgba(255,255,255,0.5)" }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -283,36 +277,29 @@ export default function Index() {
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="py-28 bg-white">
-        <div ref={servicesSection.ref} className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className={`mb-16 ${servicesSection.inView ? "animate-fade-in" : "opacity-0"}`}>
-            <span className="text-xs tracking-[0.3em] uppercase font-medium" style={{ color: "#2563b0" }}>Что я предлагаю</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4" style={{ color: "#1e2330" }}>
-              Наши услуги
+      <section id="services" className="py-24" style={{ background: "#faf8f5" }}>
+        <div ref={servicesSection.ref} className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className={`mb-14 ${servicesSection.inView ? "animate-fade-in" : "opacity-0"}`}>
+            <span className="text-[11px] tracking-[0.25em] uppercase font-medium" style={{ color: "#e8630a" }}>что я делаю</span>
+            <h2 className="font-display text-3xl md:text-4xl font-medium mt-3 mb-2" style={{ color: "#1c1612" }}>
+              Направления работы
             </h2>
-            <div className="divider-gold mb-5" />
-            <p className="text-muted-foreground text-lg max-w-xl">
-              Комплексное сопровождение бизнеса на каждом этапе развития
-            </p>
+            <div className="divider-gold mt-4" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {services.map((s, i) => (
               <div
                 key={s.title}
-                className={`group p-8 border bg-white card-hover cursor-pointer ${servicesSection.inView ? "animate-fade-in" : "opacity-0"}`}
-                style={{ borderColor: "#e2e8f0", animationDelay: `${i * 0.08}s` }}
+                className={`group p-7 rounded-2xl bg-white card-hover cursor-pointer border ${servicesSection.inView ? "animate-fade-in" : "opacity-0"}`}
+                style={{ borderColor: "#f0ebe3", animationDelay: `${i * 0.07}s` }}
               >
-                <div className="w-12 h-12 flex items-center justify-center mb-5 transition-colors duration-300 group-hover:bg-blue-600"
-                  style={{ background: "#eff6ff" }}>
-                  <Icon name={s.icon} size={22} className="transition-colors duration-300 group-hover:text-white" style={{ color: "#2563b0" }} fallback="Briefcase" />
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110"
+                  style={{ background: "linear-gradient(135deg, rgba(232,99,10,0.12), rgba(245,200,66,0.12))" }}>
+                  <Icon name={s.icon} size={20} style={{ color: "#e8630a" }} fallback="Star" />
                 </div>
-                <h3 className="font-display text-xl font-semibold mb-3" style={{ color: "#1e2330" }}>{s.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
-                <div className="mt-5 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ color: "#2563b0" }}>
-                  <span>Подробнее</span>
-                  <Icon name="ArrowRight" size={14} />
-                </div>
+                <h3 className="font-display text-lg font-medium mb-2" style={{ color: "#1c1612" }}>{s.title}</h3>
+                <p className="text-sm font-light leading-relaxed" style={{ color: "#7a6f65" }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -320,66 +307,63 @@ export default function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="py-28 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #141720 0%, #1e2330 60%, #253050 100%)" }}>
-        <div className="absolute inset-0 bg-subtle-pattern opacity-20" />
-        <div ref={aboutSection.ref} className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className={`${aboutSection.inView ? "animate-fade-in" : "opacity-0"}`}>
-              <span className="text-xs tracking-[0.3em] uppercase font-medium" style={{ color: "#4e9cf0" }}>Обо мне</span>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-white mt-3 mb-4">Никита Варакин</h2>
-              <div className="divider-gold mb-6" />
-              <p className="text-lg leading-relaxed mb-6 text-slate-300">
-                Создаю и развиваю Telegram-каналы с 2020 года. Прошёл путь от нуля до каналов с десятками тысяч подписчиков — и помогаю сделать то же самое для вас.
+      <section id="about" className="py-24 relative overflow-hidden" style={{ background: "#1c1612" }}>
+        <div className="absolute inset-0 bg-subtle-pattern opacity-30" />
+        <div ref={aboutSection.ref} className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className={aboutSection.inView ? "animate-fade-in" : "opacity-0"}>
+              <span className="text-[11px] tracking-[0.25em] uppercase font-medium" style={{ color: "#f5c842" }}>обо мне</span>
+              <h2 className="font-display text-3xl md:text-4xl font-medium text-white mt-3 mb-4">
+                Никита Варакин
+              </h2>
+              <div className="divider-gold mb-7" />
+              <p className="text-lg font-light leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.75)" }}>
+                Создаю и развиваю Дзен-каналы с 2020 года. Начинал с нуля — сейчас суммарно больше 50 000 читателей на своих и клиентских каналах.
               </p>
-              <p className="leading-relaxed mb-8 text-slate-400">
-                Работаю в трёх форматах: обучаю через готовые материалы, лично сопровождаю рост вашего канала или создаю канал полностью с нуля под ключ.
+              <p className="font-light leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.5)" }}>
+                Я не про теорию. Работаю лично с каждым — никаких команд и помощников. Ты получаешь честную обратную связь и понятный план, что делать дальше.
               </p>
-              <div className="flex flex-col gap-4">
+              <div className="space-y-3">
                 {[
-                  "Опыт создания каналов с 2020 года",
-                  "Понятная стратегия роста под вашу нишу",
-                  "Результат — живая аудитория и монетизация",
-                  "Работаю лично, без делегирования помощникам",
+                  "Работаю лично, не делегирую",
+                  "Опыт в разных нишах: авто, финансы, путешествия",
+                  "Реальные результаты у реальных людей",
+                  "Монетизация — не слова, а конкретные схемы",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <div className="w-5 h-5 flex items-center justify-center flex-shrink-0" style={{ background: "#2563b0" }}>
-                      <Icon name="Check" size={12} style={{ color: "#ffffff" }} />
-                    </div>
-                    <span className="text-sm text-slate-200">{item}</span>
+                    <span className="text-base" style={{ color: "#e8630a" }}>→</span>
+                    <span className="text-sm font-light" style={{ color: "rgba(255,255,255,0.8)" }}>{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className={`${aboutSection.inView ? "animate-slide-in-right animate-delay-200" : "opacity-0"}`}>
-              <div className="space-y-4">
-                {team.map((member) => (
-                  <div
-                    key={member.name}
-                    className="flex items-center gap-5 p-5 border backdrop-blur-sm transition-colors duration-200 hover:bg-white/10"
-                    style={{ background: "rgba(255,255,255,0.05)", borderColor: "rgba(255,255,255,0.1)" }}
-                  >
-                    <div className="w-12 h-12 flex items-center justify-center flex-shrink-0 border" style={{ background: "#253050", borderColor: "rgba(255,255,255,0.2)" }}>
-                      <Icon name="User" size={20} style={{ color: "#4e9cf0" }} />
-                    </div>
-                    <div className="flex-1">
-                      <div className="text-white font-semibold font-display text-lg">{member.name}</div>
-                      <div className="text-xs tracking-wide mt-0.5" style={{ color: "#4e9cf0" }}>{member.role}</div>
-                      <div className="text-xs mt-1 text-slate-500">{member.exp}</div>
-                    </div>
-                    <Icon name="ChevronRight" size={16} className="text-slate-500" />
-                  </div>
-                ))}
+            <div className={`${aboutSection.inView ? "animate-slide-in-right animate-delay-200" : "opacity-0"} space-y-4`}>
+              <div className="text-[11px] tracking-[0.2em] uppercase font-medium mb-5" style={{ color: "rgba(255,255,255,0.4)" }}>
+                результаты клиентов
+              </div>
+              {results.map((r, i) => (
+                <div
+                  key={r.name}
+                  className="p-5 rounded-2xl border transition-all duration-200 hover:border-orange-500/40"
+                  style={{
+                    background: "rgba(255,255,255,0.04)",
+                    borderColor: "rgba(255,255,255,0.08)",
+                    animationDelay: `${i * 0.1}s`
+                  }}
+                >
+                  <div className="text-white font-medium mb-1">{r.name}</div>
+                  <div className="text-sm font-light" style={{ color: "#f5c842" }}>{r.result}</div>
+                </div>
+              ))}
 
-                <div className="p-5 border" style={{ borderColor: "rgba(37,99,176,0.4)", background: "rgba(37,99,176,0.08)" }}>
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ background: "rgba(37,99,176,0.25)" }}>
-                      <Icon name="Award" size={18} style={{ color: "#4e9cf0" }} />
-                    </div>
-                    <div>
-                      <div className="text-white font-semibold mb-1">Результаты работы</div>
-                      <div className="text-sm text-slate-400">Каналы от 500 до 80 000+ подписчиков · Монетизация · Разные ниши</div>
-                    </div>
+              <div className="p-5 rounded-2xl border mt-2"
+                style={{ borderColor: "rgba(232,99,10,0.35)", background: "rgba(232,99,10,0.07)" }}>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">✨</span>
+                  <div>
+                    <div className="text-white font-medium text-sm">Твой канал — следующий?</div>
+                    <div className="text-sm font-light mt-0.5" style={{ color: "rgba(255,255,255,0.5)" }}>Напиши, обсудим бесплатно</div>
                   </div>
                 </div>
               </div>
@@ -388,48 +372,43 @@ export default function Index() {
         </div>
       </section>
 
-      {/* MANAGER SUPPORT BANNER */}
-      <section className="py-16" style={{ background: "#2563b0" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      {/* BANNER */}
+      <section className="py-14" style={{ background: "linear-gradient(135deg, #e8630a 0%, #f5a623 100%)" }}>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-5">
-              <div className="w-14 h-14 flex items-center justify-center flex-shrink-0" style={{ background: "rgba(255,255,255,0.15)" }}>
-                <Icon name="Send" size={28} style={{ color: "#ffffff" }} />
-              </div>
+            <div className="flex items-center gap-4">
+              <span className="text-3xl">🎯</span>
               <div>
-                <div className="font-display text-2xl font-bold text-white">Telegram-канал, который работает</div>
-                <div className="text-sm mt-0.5" style={{ color: "rgba(255,255,255,0.75)" }}>Никита лично занимается каждым проектом</div>
+                <div className="font-display text-xl font-medium text-white">Дзен-канал с нуля до первых читателей</div>
+                <div className="text-sm font-light mt-0.5" style={{ color: "rgba(255,255,255,0.8)" }}>Никита делает это лично — в любом из форматов</div>
               </div>
             </div>
             <button
               onClick={() => scrollTo("pricing")}
-              className="px-8 py-3.5 font-semibold text-sm tracking-wide flex items-center gap-2 flex-shrink-0 transition-colors duration-200 text-white"
-              style={{ background: "#141720" }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#1e2330")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#141720")}
+              className="px-7 py-3 rounded-full font-medium text-sm flex items-center gap-2 flex-shrink-0 transition-all duration-200"
+              style={{ background: "#1c1612", color: "#fff" }}
+              onMouseEnter={e => (e.currentTarget.style.background = "#2a1f14")}
+              onMouseLeave={e => (e.currentTarget.style.background = "#1c1612")}
             >
               Выбрать формат
-              <Icon name="ArrowRight" size={16} />
+              <Icon name="ArrowRight" size={15} />
             </button>
           </div>
         </div>
       </section>
 
       {/* PRICING */}
-      <section id="pricing" className="py-28 bg-background">
-        <div ref={pricingSection.ref} className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className={`mb-16 text-center ${pricingSection.inView ? "animate-fade-in" : "opacity-0"}`}>
-            <span className="text-xs tracking-[0.3em] uppercase font-medium" style={{ color: "#2563b0" }}>Стоимость</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold mt-3 mb-4" style={{ color: "#1e2330" }}>
-              Тарифные планы
+      <section id="pricing" className="py-24" style={{ background: "#faf8f5" }}>
+        <div ref={pricingSection.ref} className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className={`mb-14 text-center ${pricingSection.inView ? "animate-fade-in" : "opacity-0"}`}>
+            <span className="text-[11px] tracking-[0.25em] uppercase font-medium" style={{ color: "#e8630a" }}>тарифы</span>
+            <h2 className="font-display text-3xl md:text-4xl font-medium mt-3 mb-2" style={{ color: "#1c1612" }}>
+              Выбери свой формат
             </h2>
-            <div className="divider-gold mx-auto mb-5" />
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-              Прозрачное ценообразование без скрытых платежей
-            </p>
+            <div className="divider-gold mx-auto mt-4" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
             {plans.map((plan, i) => (
               <div
                 key={plan.name}
@@ -437,124 +416,128 @@ export default function Index() {
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
                 {plan.highlighted && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                    <span className="text-xs font-bold tracking-widest uppercase px-5 py-1.5" style={{ background: "#2563b0", color: "#ffffff" }}>
-                      Популярный
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
+                    <span className="text-xs font-medium px-4 py-1 rounded-full"
+                      style={{ background: "#e8630a", color: "#fff" }}>
+                      🔥 Популярный
                     </span>
                   </div>
                 )}
-                <div className="flex flex-col flex-1 p-8 border-2" style={{
-                  borderColor: plan.highlighted ? "#2563b0" : "#e2e8f0",
-                  background: plan.highlighted ? "#1e2330" : "white"
-                }}>
-                  <div>
-                    <div className="text-xs tracking-[0.2em] uppercase font-medium mb-1" style={{ color: plan.highlighted ? "#e8c04a" : "#94a3b8" }}>
-                      {plan.name}
-                    </div>
-                    <div className="flex items-end gap-1 mb-2">
-                      <span className="font-display text-4xl font-bold" style={{ color: plan.highlighted ? "white" : "#0e2458" }}>
-                        {plan.price}
-                      </span>
-                      {plan.period && (
-                        <span className="text-sm mb-1.5" style={{ color: plan.highlighted ? "#94a3b8" : "#94a3b8" }}>
-                          {plan.period}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-sm mb-6" style={{ color: plan.highlighted ? "#94a3b8" : "#94a3b8" }}>
-                      {plan.desc}
-                    </p>
-                    <div className="h-px mb-6" style={{ background: plan.highlighted ? "rgba(255,255,255,0.1)" : "#f1f5f9" }} />
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((f) => (
-                        <li key={f} className="flex items-center gap-3">
-                          <div className="w-4 h-4 flex items-center justify-center flex-shrink-0"
-                            style={{ background: plan.highlighted ? "rgba(78,156,240,0.2)" : "#eff6ff" }}>
-                            <Icon name="Check" size={10} style={{ color: plan.highlighted ? "#4e9cf0" : "#2563b0" }} />
-                          </div>
-                          <span className="text-sm" style={{ color: plan.highlighted ? "#cbd5e1" : "#475569" }}>{f}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <div
+                  className="flex flex-col flex-1 p-7 rounded-2xl border-2 transition-all duration-300 hover:shadow-lg"
+                  style={{
+                    borderColor: plan.highlighted ? "#e8630a" : "#f0ebe3",
+                    background: plan.highlighted ? "#1c1612" : "white",
+                  }}
+                >
+                  <div className="text-3xl mb-4">{plan.emoji}</div>
+                  <div className="text-[11px] tracking-[0.15em] uppercase font-medium mb-1"
+                    style={{ color: plan.highlighted ? "rgba(255,255,255,0.45)" : "#a89888" }}>
+                    {plan.name}
                   </div>
+                  <div className="flex items-end gap-1.5 mb-1">
+                    <span className="font-display text-3xl font-medium"
+                      style={{ color: plan.highlighted ? "#fff" : "#1c1612" }}>
+                      {plan.price}
+                    </span>
+                    <span className="text-sm font-light mb-1"
+                      style={{ color: plan.highlighted ? "rgba(255,255,255,0.4)" : "#a89888" }}>
+                      {plan.period}
+                    </span>
+                  </div>
+                  <p className="text-sm font-light mb-5"
+                    style={{ color: plan.highlighted ? "rgba(255,255,255,0.55)" : "#7a6f65" }}>
+                    {plan.desc}
+                  </p>
+                  <div className="h-px mb-5"
+                    style={{ background: plan.highlighted ? "rgba(255,255,255,0.08)" : "#f0ebe3" }} />
+                  <ul className="space-y-2.5 mb-7 flex-1">
+                    {plan.features.map((f) => (
+                      <li key={f} className="flex items-center gap-2.5 text-sm font-light"
+                        style={{ color: plan.highlighted ? "rgba(255,255,255,0.75)" : "#4a3f35" }}>
+                        <span style={{ color: "#e8630a" }}>✓</span>
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
                   <button
-                    className="mt-auto w-full py-3.5 font-semibold text-sm tracking-wide transition-all duration-200"
+                    className="mt-auto w-full py-3 rounded-full font-medium text-sm transition-all duration-200"
                     style={plan.highlighted
-                      ? { background: "#2563b0", color: "#ffffff" }
-                      : { border: "2px solid #1e2330", color: "#1e2330", background: "transparent" }}
+                      ? { background: "#e8630a", color: "#fff" }
+                      : { border: "1.5px solid #1c1612", color: "#1c1612", background: "transparent" }}
                     onMouseEnter={e => {
-                      if (plan.highlighted) e.currentTarget.style.background = "#3b82d4";
-                      else { e.currentTarget.style.background = "#1e2330"; e.currentTarget.style.color = "white"; }
+                      if (plan.highlighted) e.currentTarget.style.background = "#f07c2a";
+                      else { e.currentTarget.style.background = "#1c1612"; e.currentTarget.style.color = "#fff"; }
                     }}
                     onMouseLeave={e => {
-                      if (plan.highlighted) e.currentTarget.style.background = "#2563b0";
-                      else { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#1e2330"; }
+                      if (plan.highlighted) e.currentTarget.style.background = "#e8630a";
+                      else { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#1c1612"; }
                     }}
                   >
-                    {plan.price === "По запросу" ? "Обсудить условия" : "Подключить"}
+                    {plan.price === "33 900" ? "Обсудить" : "Выбрать"}
                   </button>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className={`mt-12 p-6 border flex flex-col md:flex-row items-center gap-4 bg-white ${pricingSection.inView ? "animate-fade-in animate-delay-400" : "opacity-0"}`}
-            style={{ borderColor: "#e2e8f0" }}>
-            <Icon name="Info" size={20} className="flex-shrink-0" style={{ color: "#2563b0" }} />
-            <p className="text-slate-500 text-sm">
-              Все форматы включают <strong style={{ color: "#1e2330" }}>личное участие Никиты</strong>. Оплата разовая, доступ к материалам — бессрочный. Есть вопросы? Напишите перед покупкой.
-            </p>
-          </div>
+          <p className={`text-center text-sm font-light mt-8 ${pricingSection.inView ? "animate-fade-in animate-delay-400" : "opacity-0"}`}
+            style={{ color: "#a89888" }}>
+            Оплата разовая · Доступ бессрочный · Есть вопрос? Напиши сначала 👋
+          </p>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 relative overflow-hidden" style={{ background: "#141720" }}>
-        <div className="absolute inset-0 bg-subtle-pattern opacity-10" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <span className="text-xs tracking-[0.3em] uppercase font-medium" style={{ color: "#4e9cf0" }}>Начните сегодня</span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mt-4 mb-5">
-            Готовы запустить канал?
+      <section className="py-24 relative overflow-hidden" style={{ background: "#1c1612" }}>
+        <div className="absolute inset-0 bg-subtle-pattern opacity-20" />
+        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+          <span className="text-3xl block mb-5">✌️</span>
+          <h2 className="font-display text-3xl md:text-4xl font-medium text-white mb-4">
+            Готов запустить свой Дзен-канал?
           </h2>
-          <p className="text-lg mb-10 max-w-lg mx-auto text-slate-400">
-            Выберите подходящий формат и напишите Никите — он ответит и поможет определиться.
+          <p className="font-light mb-10" style={{ color: "rgba(255,255,255,0.5)", fontSize: "1.05rem" }}>
+            Напиши Никите — разберёмся вместе, какой формат подходит именно тебе.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <button
-              className="px-10 py-4 font-semibold text-sm tracking-wide transition-colors duration-200"
-              style={{ background: "#2563b0", color: "#ffffff" }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#3b82d4")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#2563b0")}
+              className="px-8 py-3.5 rounded-full font-medium text-sm transition-all duration-200"
+              style={{ background: "#e8630a", color: "#fff" }}
+              onMouseEnter={e => (e.currentTarget.style.background = "#f07c2a")}
+              onMouseLeave={e => (e.currentTarget.style.background = "#e8630a")}
             >
               Написать Никите
             </button>
             <button
-              className="px-10 py-4 border text-white text-sm font-medium transition-colors duration-200 flex items-center justify-center gap-2 hover:bg-white/10"
-              style={{ borderColor: "rgba(255,255,255,0.2)" }}
+              onClick={() => scrollTo("pricing")}
+              className="px-8 py-3.5 rounded-full text-sm font-light transition-all duration-200"
+              style={{ border: "1px solid rgba(255,255,255,0.2)", color: "rgba(255,255,255,0.75)" }}
+              onMouseEnter={e => (e.currentTarget.style.background = "rgba(255,255,255,0.07)")}
+              onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
             >
-              <Icon name="Phone" size={16} />
-              +7 (495) 000-00-00
+              Посмотреть тарифы
             </button>
           </div>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="py-10 border-t" style={{ background: "#000000", borderColor: "rgba(255,255,255,0.05)" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <footer className="py-8 border-t" style={{ background: "#100e0b", borderColor: "rgba(255,255,255,0.05)" }}>
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="w-7 h-7 flex items-center justify-center" style={{ background: "#2563b0" }}>
-                <span className="font-display font-bold text-sm text-white">Н</span>
+            <div className="flex items-center gap-2.5">
+              <div className="w-6 h-6 rounded-full flex items-center justify-center text-white font-display font-semibold text-xs"
+                style={{ background: "linear-gradient(135deg, #e8630a, #f5c842)" }}>
+                Н
               </div>
-              <span className="font-display text-white font-semibold">Никита Варакин</span>
+              <span className="font-display text-white font-medium text-sm">Никита Варакин</span>
             </div>
-            <div className="text-xs" style={{ color: "#475569" }}>
-              © 2024 Никита Варакин. Все права защищены.
+            <div className="text-xs font-light" style={{ color: "rgba(255,255,255,0.25)" }}>
+              © 2024 Никита Варакин · Дзен-каналы
             </div>
-            <div className="flex gap-6 text-xs" style={{ color: "#475569" }}>
-              <button className="hover:text-slate-400 transition-colors">Политика конфиденциальности</button>
-              <button className="hover:text-slate-400 transition-colors">Реквизиты</button>
+            <div className="flex gap-5 text-xs font-light" style={{ color: "rgba(255,255,255,0.3)" }}>
+              <button className="hover:text-white/60 transition-colors">Политика</button>
+              <button className="hover:text-white/60 transition-colors">Контакты</button>
             </div>
           </div>
         </div>
