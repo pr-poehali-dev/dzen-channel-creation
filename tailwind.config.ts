@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['IBM Plex Sans', 'sans-serif'],
-				display: ['Cormorant Garamond', 'serif'],
+				sans: ['PT Sans', 'sans-serif'],
+				display: ['PT Serif', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
